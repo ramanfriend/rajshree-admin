@@ -21,8 +21,8 @@ if ($bid == 1 || $bid == "1") {
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Askbootstrap">
-      <meta name="author" content="Askbootstrap">
+      <meta name="description" content="My Tube">
+      <meta name="author" content="RK Tech">
       <title>VIDOE - Video Streaming Website HTML Template</title>
       <!-- Favicon Icon -->
       <link rel="icon" type="image/png" href="img/favicon.png">

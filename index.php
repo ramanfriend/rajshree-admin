@@ -1,5 +1,5 @@
 <?php 
- $movieList1 = array("mardaani", "commando", "dabangg");
+ $movieList1 = array("dabangg", "commando","mardaani");
  $movieList2 = array("joker");  //ramanmarch90
 
  $movieBucket1 = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/myvideo/o/";
@@ -18,8 +18,8 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Askbootstrap">
-      <meta name="author" content="Askbootstrap">
+      <meta name="description" content="My Tube">
+      <meta name="author" content="RK Tech">
       <title>MyTube - Video Streaming Website</title>
       <!-- Favicon Icon -->
       <link rel="icon" type="image/png" href="img/favicon.png">
