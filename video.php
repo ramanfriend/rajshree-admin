@@ -1,3 +1,19 @@
+<?php 
+
+$id = $_GET['id'];
+$bid = $_GET['bid'];
+$movieBucket = "";
+$imageBucket = "";
+ 
+if ($bid == 1 || $bid == "1") {
+    $movieBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/myvideo/o/";
+    $imageBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/moviepic/o/";
+} else if($bid == 2 || $bid == "2") {
+    $movieBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmocr3ypspzl/b/myvideo/o/"; //ramanmarch90
+    $imageBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmocr3ypspzl/b/moviepic/o/"; //ramanmarch90
+} 
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,36 +56,7 @@
          </form>
          <!-- Navbar -->
          <ul class="navbar-nav ml-auto ml-md-0 osahan-right-navbar">
-            <li class="nav-item mx-1">
-               <a class="nav-link" href="upload.html">
-               <i class="fas fa-plus-circle fa-fw"></i>
-               Upload Video
-               </a>
-            </li>
-            <li class="nav-item dropdown no-arrow mx-1">
-               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i class="fas fa-bell fa-fw"></i>
-               <span class="badge badge-danger">9+</span>
-               </a>
-               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-edit "></i> &nbsp; Action</a>
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-headphones-alt "></i> &nbsp; Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-star "></i> &nbsp; Something else here</a>
-               </div>
-            </li>
-            <li class="nav-item dropdown no-arrow mx-1">
-               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i class="fas fa-envelope fa-fw"></i>
-               <span class="badge badge-success">7</span>
-               </a>
-               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-edit "></i> &nbsp; Action</a>
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-headphones-alt "></i> &nbsp; Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><i class="fas fa-fw fa-star "></i> &nbsp; Something else here</a>
-               </div>
-            </li>
+            
             <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
                <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <img alt="Avatar" src="img/user.png">
@@ -86,105 +73,18 @@
          </ul>
       </nav>
       <div id="wrapper">
-         <!-- Sidebar -->
-         <ul class="sidebar navbar-nav">
-            <li class="nav-item active">
-               <a class="nav-link" href="index.html">
-               <i class="fas fa-fw fa-home"></i>
-               <span>Home</span>
-               </a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="channels.html">
-               <i class="fas fa-fw fa-users"></i>
-               <span>Channels</span>
-               </a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="single-channel.html">
-               <i class="fas fa-fw fa-user-alt"></i>
-               <span>Single Channel</span>
-               </a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="video-page.html">
-               <i class="fas fa-fw fa-video"></i>
-               <span>Video Page</span>
-               </a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="upload-video.html">
-               <i class="fas fa-fw fa-cloud-upload-alt"></i>
-               <span>Upload Video</span>
-               </a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i class="fas fa-fw fa-folder"></i>
-               <span>Pages</span>
-               </a>
-               <div class="dropdown-menu">
-                  <h6 class="dropdown-header">Login Screens:</h6>
-                  <a class="dropdown-item" href="login.html">Login</a>
-                  <a class="dropdown-item" href="register.html">Register</a>
-                  <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-                  <div class="dropdown-divider"></div>
-                  <h6 class="dropdown-header">Other Pages:</h6>
-                  <a class="dropdown-item" href="404.html">404 Page</a>
-                  <a class="dropdown-item" href="blank.html">Blank Page</a>
-               </div>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="history-page.html">
-               <i class="fas fa-fw fa-history"></i>
-               <span>History Page</span>
-               </a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="categories.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i class="fas fa-fw fa-list-alt"></i>
-               <span>Categories</span>
-               </a>
-               <div class="dropdown-menu">
-                  <a class="dropdown-item" href="categories.html">Movie</a>
-                  <a class="dropdown-item" href="categories.html">Music</a>
-                  <a class="dropdown-item" href="categories.html">Television</a>
-               </div>
-            </li>
-            <li class="nav-item channel-sidebar-list">
-               <h6>SUBSCRIPTIONS</h6>
-               <ul>
-                  <li>
-                     <a href="subscriptions.html">
-                     <img class="img-fluid" alt="" src="img/s1.png"> Your Life 
-                     </a>
-                  </li>
-                  <li>
-                     <a href="subscriptions.html">
-                     <img class="img-fluid" alt="" src="img/s2.png"> Unboxing  <span class="badge badge-warning">2</span>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="subscriptions.html">
-                     <img class="img-fluid" alt="" src="img/s3.png"> Product / Service  
-                     </a>
-                  </li>
-               </ul>
-            </li>
-         </ul>
+         
          <div id="content-wrapper">
-            <div class="container-fluid pb-0">
+            <div style="padding: 10px;">
                <div class="video-block section-padding">
                   <div class="row">
                      <div class="col-md-8">
                         <div class="single-video-left">
                            <div class="single-video">
-                              <!-- <iframe width="100%" height="315" src="https://cloud.degoo.com/e/drive-ce6w5izbcdjn" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                              <!-- <a href="http://www.mediafire.com/file/6n43p832hk6wwd0/VID-20191231-WA0058.mp4/file" target="_blank">http://www.mediafire.com/file/6n43p832hk6wwd0/VID-20191231-WA0058.mp4/file</a> -->
-                              <video poster="img/Joker2019-Movie-HD-Poster-FilmSpell_1-990x556.jpg" width="100%" height="315" controls>
-                                 <source src="https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmocr3ypspzl/b/myvideo/o/Joker.2019.720p.BluRay.x264-%5BYTS.LT%5D.mp4" type="video/mp4" />
+                               <video poster="<?=$imageBucket;?><?=$id;?>" width="100%" height="415" controls>
+                                 <source src='<?=$movieBucket;?><?=$id;?>'   type="video/mp4" />
                                Your browser does not support the video tag.
-                               <track label="English" kind="subtitles" srclang="en" src="captions/vtt/Joker.2019.vtt" default>
+                               <!-- <track label="English" kind="subtitles" srclang="en" src="captions/vtt/Joker.2019.vtt" default> -->
                                </video>
                            </div>
                            <div class="single-video-title box mb-3">
@@ -220,12 +120,6 @@
                         <div class="single-video-right">
                            <div class="row">
                               <div class="col-md-12">
-                                 <div class="adblock">
-                                    <div class="img">
-                                       Google AdSense<br>
-                                       336 x 280
-                                    </div>
-                                 </div>
                                  <div class="main-title">
                                     <div class="btn-group float-right right-action">
                                        <a href="#" class="right-action-link text-gray" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -409,12 +303,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="adblock mt-0">
-                                    <div class="img">
-                                       Google AdSense<br>
-                                       336 x 280
-                                    </div>
-                                 </div>
+                                
                                  <div class="video-card video-card-list">
                                     <div class="video-card-image">
                                        <a class="play-icon" href="#"><i class="fas fa-play-circle"></i></a>
@@ -451,25 +340,6 @@
                </div>
             </div>
             <!-- /.container-fluid -->
-            <!-- Sticky Footer -->
-            <footer class="sticky-footer">
-               <div class="container">
-                  <div class="row no-gutters">
-                     <div class="col-lg-6 col-sm-6">
-                        <p class="mt-1 mb-0">&copy; Copyright 2018 <strong class="text-dark">Vidoe</strong>. All Rights Reserved<br>
-                           <small class="mt-0 mb-0">Made with <i class="fas fa-heart text-danger"></i> by <a class="text-primary" target="_blank" href="https://askbootstrap.com/">Ask Bootstrap</a>
-                           </small>
-                        </p>
-                     </div>
-                     <div class="col-lg-6 col-sm-6 text-right">
-                        <div class="app">
-                           <a href="#"><img alt="" src="img/google.png"></a>
-                           <a href="#"><img alt="" src="img/apple.png"></a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </footer>
          </div>
          <!-- /.content-wrapper -->
       </div>
