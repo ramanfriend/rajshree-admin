@@ -1,5 +1,5 @@
 <?php 
- $movieList1 = array("dabangg","commando","mardaani");
+ $movieList1 = array("dabangg","commando","mardaani","charlies");
  $movieList2 = array("tanhaji","goodnewwz","dreamgirl","chhapaak","joker");  //ramanmarch90
 
  $movieBucket1 = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/myvideo/o/";
