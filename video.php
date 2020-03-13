@@ -83,7 +83,7 @@ if ($bid == 1 || $bid == "1") {
                                <video poster="<?=$imageBucket;?><?=$id;?>" width="100%" height="415" controls>
                                  <source src='<?=$movieBucket;?><?=$id;?>'   type="video/mp4" />
                                Your browser does not support the video tag.
-                               <track label="English" kind="subtitles" srclang="en" src="<?=$movieBucket;?><?=$id;?>.vtt" default>
+                               <track label="English" kind="subtitles" srclang="en" src="captions/vtt/jumanji.vtt" default>
                                </video>
                            </div>
                            <div class="single-video-title box mb-3">
