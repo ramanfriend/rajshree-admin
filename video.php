@@ -4,7 +4,6 @@ $id = $_GET['id'];
 $bid = $_GET['bid'];
 $movieBucket = "";
 $imageBucket = "";
- 
 if ($bid == 1 || $bid == "1") {
     $movieBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/myvideo/o/";
     $imageBucket = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bmqlzt2cz5mu/b/moviepic/o/";
@@ -84,7 +83,7 @@ if ($bid == 1 || $bid == "1") {
                                <video poster="<?=$imageBucket;?><?=$id;?>" width="100%" height="415" controls>
                                  <source src='<?=$movieBucket;?><?=$id;?>'   type="video/mp4" />
                                Your browser does not support the video tag.
-                               <!-- <track label="English" kind="subtitles" srclang="en" src="captions/vtt/Joker.2019.vtt" default> -->
+                               <track label="English" kind="subtitles" srclang="en" src="<?=$movieBucket;?><?=$id;?>.vtt" default>
                                </video>
                            </div>
                            <div class="single-video-title box mb-3">
